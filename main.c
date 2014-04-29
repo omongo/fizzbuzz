@@ -6,8 +6,7 @@ int main(void)
 {
   unsigned input;
   char *buffer = (char *) malloc(sizeof(char) * 9);
-  scanf("%u", &input);
-  if (input <= 99999999u)
-    printf("%s\n", fizzbuzz(input, buffer));
+  for (int i = 1; i <= 100; i++)
+    printf("%d\t-\t%s\n", i, fizzbuzz(i, buffer));
   free(buffer);
 }
